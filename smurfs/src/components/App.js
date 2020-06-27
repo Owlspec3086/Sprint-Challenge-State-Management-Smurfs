@@ -38,6 +38,8 @@ const App = () => {
 
   //Axios call for smurf Post request
   const onSubmit = (evt) => {
+    //dont forget to add prevent default in every form submitting
+    evt.preventDefault()
     axios
       .post('http://localhost:3333/smurfs', smurfValues)
       .then((res) => {
